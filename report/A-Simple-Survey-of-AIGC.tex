@@ -45,8 +45,69 @@ AIGC, Transformer, Diffusion, Security, Robustness
 \end{IEEEkeywords}
 
 \section{Introduction}
-This document is a model and instructions for \LaTeX.
-Please observe the conference page limits. 
+This survey will cover the following sections: In the first part, 
+we will focus on explaining the basic principles of the Transformer, 
+followed by a discussion of the details of language models (LLMs) 
+that use the Transformer, such as BERT, GPT, etc. 
+We will also cover some techniques for training and optimizing 
+these models. In the second part, we will provide a comprehensive 
+introduction to diffusion models, starting with three different forms 
+of diffusion models and showcasing various architectures that utilize 
+diffusion models, as well as different variants of diffusion models. 
+In the final section, we will discuss the security and 
+robustness of GPT models and diffusion models, respectively, 
+based on recent research findings.
+
+\section{Transformer}
+\par Generative models have a long history in artificial intelligence, dating back to the 1950s with the
+development of Hidden Markov Models (HMMs) [20] and Gaussian Mixture Models (GMMs) [21 ].
+These models generated sequential data such as speech and time series. However, it wasn’t until
+the advent of deep learning that generative models saw significant improvements in performance.
+In early years of deep generative models, different areas do not have much overlap in general.
+In natural language processing (NLP), a traditional method to generate sentences is to learn
+word distribution using N-gram language modeling [22] and then search for the best sequence.
+However, this method cannot effectively adapt to long sentences. To solve this problem, recurrent
+neural networks (RNNs) [23] were later introduced for language modeling tasks , allowing for
+modeling relatively long dependency. This was followed by the development of Long Short-Term
+Memory (LSTM) [ 24 ] and Gated Recurrent Unit (GRU) [ 25 ], which leveraged gating mechanism to
+control memory during training. These methods are capable of attending to around 200 tokens in a
+sample [26], which marks a significant improvement compared to N-gram language models.
+\par Meanwhile, in computer vision (CV), before the advent of deep learning-based methods, tra-
+ditional image generation algorithms used techniques such as texture synthesis [27] and texture
+mapping [28]. These algorithms were based on hand-designed features, and were limited in their abil-
+ity to generate complex and diverse images. In 2014, Generative Adversarial Networks (GANs) [ 29]
+was first proposed, which was a significant milestone in this area, due to its impressive results
+in various applications. Variational Autoencoders (VAEs) [30] and other methods like diffusion
+generative models [31] have also been developed for more fine-grained control over the image
+generation process and the ability to generate high-quality images.
+\par The advancement of generative models in various domains has followed different paths, but
+eventually, the intersection emerged: the transformer architecture [32]. Introduced by Vaswani et
+al. for NLP tasks in 2017, Transformer has later been applied in CV and then become the dominant
+backbone for many generative models in various domains [9 , 33, 34]. In the field of NLP, many
+prominent large language models, e.g., BERT and GPT, adopt the transformer architecture as
+their primary building block, offering advantages over previous building blocks, i.e., LSTM and
+GRU. In CV, Vision Transformer (ViT) [ 35 ] and Swin Transformer [ 36] later takes this concept
+even further by combining the transformer architecture with visual components, allowing it to
+be applied to image based downstreams. Except for the improvement that transformer brought
+to individual modalities, this intersection also enabled models from different domains to be fused
+together for multimodal tasks. One such example of multimodal models is CLIP [ 37 ]. CLIP is a
+joint vision-language model that combines the transformer architecture with visual components,
+allowing it to be trained on a massive amount of text and image data. Since it combines visual
+and language knowledge during pre-training, it can also be used as image encoders in multimodal
+prompting for generation. In all, the emergence of transformer based models revolutionized AI
+generation and led to the possibility of large-scale training.
+\subsection{Model Architecture}
+\subsection{Training}
+\subsection{Optimizing}
+
+\section{Diffusion Model}
+\subsection{Foundations of Diffusion Models}
+\subsection{Applications of Diffusion Models}
+\subsection{Optimizing}
+
+\section{Security and Robustness}
+
+
 
 \section{Ease of Use}
 
