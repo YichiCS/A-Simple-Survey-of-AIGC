@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999995 (TeX Live 2023) (preloaded format=xelatex 2023.4.23)  17 MAY 2023 20:01
+This is XeTeX, Version 3.141592653-2.6-0.999995 (TeX Live 2023) (preloaded format=xelatex 2023.4.23)  18 MAY 2023 10:29
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -209,7 +209,11 @@ File: l3backend-xetex.def 2023-01-16 L3 backend support: XeTeX
 \g__pdf_backend_object_int=\count279
 \g__pdf_backend_annotation_int=\count280
 \g__pdf_backend_link_int=\count281
-) (./A-Simple-Survey-of-AIGC.aux)
+) (./A-Simple-Survey-of-AIGC.aux
+
+LaTeX Warning: Label `fig' multiply defined.
+
+)
 \openout1 = `A-Simple-Survey-of-AIGC.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 13.
@@ -314,26 +318,26 @@ LaTeX Font Warning: Font shape `TU/ptm/b/it' undefined
 (Font)              using `TU/ptm/bx/it' instead on input line 13.
 
 -- Lines per column: 58 (exact).
-LaTeX Font Info:    Calculating math sizes for size <11> on input line 28.
-LaTeX Font Info:    Trying to load font information for U+msa on input line 28.
+LaTeX Font Info:    Calculating math sizes for size <11> on input line 27.
+LaTeX Font Info:    Trying to load font information for U+msa on input line 27.
 (/usr/local/texlive/2023/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 28.
+LaTeX Font Info:    Trying to load font information for U+msb on input line 27.
  (/usr/local/texlive/2023/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
 
 LaTeX Font Warning: Font shape `TU/ptm/b/n' undefined
-(Font)              using `TU/ptm/bx/n' instead on input line 30.
+(Font)              using `TU/ptm/bx/n' instead on input line 29.
 
 
 LaTeX Font Warning: Font shape `TU/ptm/b/n' undefined
-(Font)              using `TU/ptm/bx/n' instead on input line 43.
+(Font)              using `TU/ptm/bx/n' instead on input line 42.
 
 
 LaTeX Font Warning: Font shape `TU/ptm/m/sc' undefined
-(Font)              using `TU/ptm/m/n' instead on input line 47.
+(Font)              using `TU/ptm/m/n' instead on input line 46.
 
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
@@ -342,58 +346,35 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 
 
 ]
-LaTeX Font Info:    Trying to load font information for TU+pcr on input line 166.
-LaTeX Font Info:    No file TUpcr.fd. on input line 166.
+File: pic/pic0.png Graphic file (type bmp)
+<pic/pic0.png>
+File: pic/pic1.png Graphic file (type bmp)
+<pic/pic1.png>
 
-
-LaTeX Font Warning: Font shape `TU/pcr/m/n' undefined
-(Font)              using `TU/lmr/m/n' instead on input line 166.
+Overfull \hbox (9.5307pt too wide) detected at line 167
+[]
+ []
 
 [2]
+Overfull \hbox (10.0724pt too wide) detected at line 220
+[]
+ []
 
-LaTeX Font Warning: Font shape `TU/ptm/b/n' undefined
-(Font)              using `TU/ptm/bx/n' instead on input line 218.
-
-
-LaTeX Font Warning: Font shape `TU/ptm/b/n' undefined
-(Font)              using `TU/ptm/bx/n' instead on input line 258.
-
-
-LaTeX Font Warning: Font shape `TU/ptm/b/n' undefined
-(Font)              using `TU/ptm/bx/n' instead on input line 258.
-
-
-LaTeX Font Warning: Font shape `TU/ptm/b/n' undefined
-(Font)              using `TU/ptm/bx/n' instead on input line 260.
-
-
-LaTeX Font Warning: Font shape `TU/ptm/b/n' undefined
-(Font)              using `TU/ptm/bx/n' instead on input line 260.
-
-
-LaTeX Font Warning: Font shape `TU/ptm/b/n' undefined
-(Font)              using `TU/ptm/bx/n' instead on input line 260.
-
-
-LaTeX Font Warning: Font shape `TU/ptm/b/n' undefined
-(Font)              using `TU/ptm/bx/n' instead on input line 260.
-
-File: fig1.png Graphic file (type bmp)
-<fig1.png>
-[3] [4
-
-] (./A-Simple-Survey-of-AIGC.aux)
+[3] (./A-Simple-Survey-of-AIGC.aux)
 
 LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 
+
+LaTeX Warning: There were multiply-defined labels.
+
  ) 
 Here is how much of TeX's memory you used:
- 3840 strings out of 476683
- 61441 string characters out of 5804047
- 1875018 words of memory out of 5000000
- 24060 multiletter control sequences out of 15000+600000
- 520009 words of font info for 75 fonts, out of 8000000 for 9000
+ 3823 strings out of 476683
+ 61346 string characters out of 5804047
+ 1873018 words of memory out of 5000000
+ 24046 multiletter control sequences out of 15000+600000
+ 517821 words of font info for 66 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
- 55i,11n,62p,594b,306s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 55i,12n,62p,315b,267s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
-Output written on A-Simple-Survey-of-AIGC.pdf (4 pages).
+Output written on A-Simple-Survey-of-AIGC.pdf (3 pages).
