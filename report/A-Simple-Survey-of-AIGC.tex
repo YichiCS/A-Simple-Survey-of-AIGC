@@ -96,14 +96,14 @@ and language knowledge during pre-training, it can also be used as image encoder
 prompting for generation. In all, the emergence of transformer based models revolutionized AI
 generation and led to the possibility of large-scale training.
 
-\subsection{Model Architecture}
+\subsection{Model Architecture of Transformer}
 \par Here is a diagram of the Transformer model architecture. 
 We will now explain this architecture by focusing on several modules: 
 Encoder-Decoder, Self-Attention, Position-wise Feed-Forward Network, 
 Embeddings, and Softmax.
 
 \begin{figure}[htbp]
-    \centerline{\includegraphics[width = 8cm]{pic/pic0.png}}
+    \centerline{\includegraphics[width = 8cm]{pic/fig1.png}}
     \caption{Model Architecture of Transformer}
     \label{fig}
 \end{figure}
@@ -136,7 +136,7 @@ to be viewed as a weighted sum of values, where each value's weight can be seen 
 calculated based on the query and its corresponding key.
 
 \begin{figure}[htbp]
-    \centerline{\includegraphics[width = 8cm]{pic/pic1.png}}
+    \centerline{\includegraphics[width = 8cm]{pic/fig2.png}}
     \caption{Attention Mechanism}
     \label{fig}
 \end{figure}
@@ -209,7 +209,7 @@ the Transformer uses sine and cosine functions of different frequencies to encod
 \par where $pos$ is the position and $i$ is the dimension.
 
 
-\subsection{Training}
+\subsection{Training of Transformer}
 \par In the original Transformer paper, the model was trained on the standard WMT 2014 English-German 
 dataset using the Adam optimizer with hyperparameters $\beta_1 = 0.9$, $\beta_2 = 0.98$, and 
 $ \epsilon = 10^{-9}$. The learning rate was assigned based on a formula, where the number 
@@ -224,22 +224,108 @@ techniques were applied, such as Residual Dropout with $P_{drop} = 0.1$ and labe
 smoothing with a value of $\epsilon_{ps} = 0.1$. The use of these techniques allowed 
 the Transformer to achieve better performance after training.
 
-\section{BERT \& GPT}
-
-\par In this section, we will discuss BERT and GPT, which are both based on the Transformer 
-architecture. BERT primarily uses the Transformer encoder, while GPT primarily uses 
-the Transformer decoder. After briefly introducing BERT, we will focus more on the 
-structural changes and training methods used in GPT.
-
-\subsection{BERT}
+\section{BERT}
 
 \par BERT, which stands for Bidirectional Encoder Representations fromTransformers. 
 Unlike recent language representation models (Peters et al., 2018a; Radford et al., 2018), 
 BERT is designed to pre-train deep bidirectional representations from
-unlabeled text by jointly conditioning on both left and right context in all layers. As a re-
-sult, the pre-trained BERT model can be fine-tuned with just one additional output layer
+unlabeled text by jointly conditioning on both left and right context in all layers. As a 
+result, the pre-trained BERT model can be fine-tuned with just one additional output layer
 to create state-of-the-art models for a wide range of tasks, such as question answering and
 language inference, without substantial taskspecific architecture modifications.
+
+\subsection{Model Architecture of BERT}
+\par The model architecture of BERT is a multi-layer bidirectional Transformer encoder 
+based on the Transformer architecture. Compared to the original Transformer architecture, 
+BERT uses a bidirectional structure, which will be explained in more details later.
+
+\par In addition, BERT also employs different structures for input and output 
+representations. To adapt to different downstream tasks, the input representation 
+should be able to handle sequences consisting of multiple sentences as single token. 
+Therefore, BERT uses WordPiece embeddings for this purpose.
+
+\par In BERT, the first token of each sequence is a special classification token ([CLS]). 
+Sentences pairs are packed into a single sequence. There are two methods to differentiate 
+between different sentences within a sequence. Firstly, a special separator token ([SEP]) 
+is used to separate different sentences. Secondly, a learnable embedding is added to each 
+token to indicate which sentence it belongs to.For a given token, its input representation 
+is constructed by summing the corresponding token, segment, and position embeddings, that's 
+what Fig3 shows.
+
+\begin{figure}[htbp]
+    \centerline{\includegraphics[width = 8cm]{pic/fig3.png}}
+    \caption{Input Representation of BERT}
+    \label{fig}
+\end{figure}
+
+
+\subsection{Training of BERT}
+
+\par Training BERT is a crucial part of its development, and it involves several 
+techniques, including Unsupervised Feature-based Approaches, Unsupervised 
+Fine-tuning Approaches, and Transfer Learning from Supervised Data. The training 
+process is divided into two parts. 
+
+\begin{figure}[htbp]
+    \centerline{\includegraphics[width = 8cm]{pic/fig4.png}}
+    \caption{Training of BERT}
+    \label{fig}
+\end{figure}
+
+\par The first part is Pre-Training, during which BERT 
+is trained to perform two tasks.Task 1 is Masked Language Modeling (MLM), where 
+15\% of the wordpiece tokens are randomly masked and replaced with a special token ([MASK]). 
+BERT is then trained to predict these masked tokens.Task 2 is Next Sentence Prediction (NSP), 
+where BERT is given a pair of sentences A and B and is trained to predict whether 
+sentence B follows sentence A.
+
+\par The second part is fine-tuning, where we use a small amount of 
+labeled data to train BERT for specific downstream tasks. Because of the properties of 
+the Transformer architecture, BERT can model downstream tasks by adjusting its inputs and 
+outputs. During fine-tuning, BERT uses bidirectional self-attention mechanisms to encode 
+text and to coordinate and unify its inputs and outputs for the specific task at hand.
+
+\section{GPT}
+
+\par GPT (Generative Pre-trained Transformer) is a Transformer-based pre-trained language 
+model developed by OpenAI. The development of GPT can be divided into four versions. 
+GPT-1 was pre-trained on a large corpus of text and was one of the first models to 
+demonstrate excellent performance in natural language processing tasks. GPT-2 is an 
+improved version of GPT-1, pre-trained on larger datasets with more parameters, and 
+can generate more natural and fluent text. GPT-3 is a much larger pre-trained language 
+model with 175 billion parameters, achieving state-of-the-art results on various natural 
+language processing tasks. As of today, GPT-4 is currently under development, expected 
+to have even larger model parameters and better support for multimodal input to handle 
+more complex tasks.
+
+\subsection{GPT-1}
+
+\par GPT-1 implemented a semi-supervised approach that combines unsupervised pre-training 
+and supervised fine-tuning to accomplish language understanding tasks. This approach 
+enables a large amount of training to form a global transformation, and only minor 
+adjustments are needed to adapt to a wide range of downstream tasks.
+
+\subsubsection{Model Architecture of GPT-1}
+
+\par GPT-1 uses a TransformerDecoder as its primary architecture, 
+which has been proven to have strong performance on various tasks. However, 
+depending on the specific task, we can replace or fine-tune different modules 
+of the model, such as its input and output, to better adapt to the task at hand.
+
+\begin{figure}[htbp]
+    \centerline{\includegraphics[width = 8cm]{pic/fig5.png}}
+    \caption{Model Architecture of GPT-1 \& The Fine-tuning for different tasks}
+    \label{fig}
+\end{figure}
+
+
+
+
+
+
+
+
+
 \section{Diffusion Model}
 \subsection{Foundations of Diffusion Models}
 \subsection{Applications of Diffusion Models}
