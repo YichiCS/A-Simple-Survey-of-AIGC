@@ -9,9 +9,10 @@
 \usepackage{textcomp}
 \usepackage{xcolor}
 \usepackage{fontspec}
+\usepackage[backref]{hyperref}
 \setmainfont{Times New Roman}
-\def\BibTeX{{\rm B\kern-.05em{\sc i\kern-.025em b}\kern-.08em
-    T\kern-.1667em\lower.7ex\hbox{E}\kern-.125emX}}
+%\def\BibTeX{{\rm B\kern-.05em{\sc i\kern-.025em b}\kern-.08em
+%    T\kern-.1667em\lower.7ex\hbox{E}\kern-.125emX}}
 \begin{document}
 
 \title{A Simple Survey of AIGC\\
@@ -46,10 +47,10 @@ AIGC, Transformer, Diffusion, Security, Robustness
 \end{IEEEkeywords}
 
 \section{Introduction}
-This survey will cover the following contains: First , 
-we will focus on explaining the basic principles of the Transformer, 
+This survey will cover the following contains: First, 
+we will focus on explaining the basic principles of the Transformer\cite{b1}, 
 followed by a discussion of the details of language models (LLMs) 
-that use the Transformer, such as BERT, GPT, etc. 
+that use the Transformer, such as BERT\cite{b2}, GPT\cite{b3, b4, b5, b6}, etc. 
 We will also cover some techniques for training and optimizing 
 these models. 
 Finally, we will discuss the security and 
@@ -58,7 +59,7 @@ based on recent research findings.
 
 \section{Transformer}
 \par Generative models have a long history in artificial intelligence, dating back to the 1950s with the
-development of Hidden Markov Models (HMMs) [20] and Gaussian Mixture Models (GMMs) [21 ].
+development of Hidden Markov Models (HMMs)\cite{b7} and Gaussian Mixture Models (GMMs) [21 ].
 These models generated sequential data such as speech and time series. However, it wasn’t until
 the advent of deep learning that generative models saw significant improvements in performance.
 In early years of deep generative models, different areas do not have much overlap in general.
@@ -420,17 +421,10 @@ of the text.
 
 
 
+\bibliography{mybib}
+\bibliographystyle{IEEEtran}
 
 
-\begin{thebibliography}{00}
-\bibitem{b1} G. Eason, B. Noble, and I. N. Sneddon, ``On certain integrals of Lipschitz-Hankel type involving products of Bessel functions,'' Phil. Trans. Roy. Soc. London, vol. A247, pp. 529--551, April 1955.
-\bibitem{b2} J. Clerk Maxwell, A Treatise on Electricity and Magnetism, 3rd ed., vol. 2. Oxford: Clarendon, 1892, pp.68--73.
-\bibitem{b3} I. S. Jacobs and C. P. Bean, ``Fine particles, thin films and exchange anisotropy,'' in Magnetism, vol. III, G. T. Rado and H. Suhl, Eds. New York: Academic, 1963, pp. 271--350.
-\bibitem{b4} K. Elissa, ``Title of paper if known,'' unpublished.
-\bibitem{b5} R. Nicole, ``Title of paper with only first word capitalized,'' J. Name Stand. Abbrev., in press.
-\bibitem{b6} Y. Yorozu, M. Hirano, K. Oka, and Y. Tagawa, ``Electron spectroscopy studies on magneto-optical media and plastic substrate interface,'' IEEE Transl. J. Magn. Japan, vol. 2, pp. 740--741, August 1987 [Digests 9th Annual Conf. Magnetics Japan, p. 301, 1982].
-\bibitem{b7} M. Young, The Technical Writer's Handbook. Mill Valley, CA: University Science, 1989.
-\end{thebibliography}
 \vspace{12pt}
 
 \end{document}
