@@ -1,5 +1,5 @@
 # Fdb version 4
-["pdflatex"] 1684813840 "A-Simple-Survey-of-AIGC.tex" "A-Simple-Survey-of-AIGC.pdf" "A-Simple-Survey-of-AIGC" 1684813841 2
+["pdflatex"] 1684844450 "A-Simple-Survey-of-AIGC.tex" "A-Simple-Survey-of-AIGC.pdf" "A-Simple-Survey-of-AIGC" 1684844451 2
   "/usr/local/texlive/2023/texmf-dist/fonts/map/fontname/texfonts.map" 1577235249 3524 cb3e574dea2d1052e39280babc910dc8 ""
   "/usr/local/texlive/2023/texmf-dist/fonts/tfm/adobe/times/ptmb7t.tfm" 1136768653 2172 fd0c924230362ff848a33632ed45dc23 ""
   "/usr/local/texlive/2023/texmf-dist/fonts/tfm/adobe/times/ptmbi7t.tfm" 1136768653 2228 e564491c42a4540b5ebb710a75ff306c ""
@@ -33,8 +33,8 @@
   "/usr/local/texlive/2023/texmf-dist/web2c/texmf.cnf" 1677365944 40745 87bb86a62d462f93a1efc6b0c65c872e ""
   "/usr/local/texlive/2023/texmf-var/web2c/pdftex/pdflatex.fmt" 1682256698 7883459 49fb4880892cceb9ca0a75bf28b17f6f ""
   "/usr/local/texlive/2023/texmf.cnf" 1678822455 577 1b2b1af17af2508fb20dd85783af4050 ""
-  "A-Simple-Survey-of-AIGC.aux" 1684813840 32 3985256e7290058c681f74d7a3565a19 "pdflatex"
-  "A-Simple-Survey-of-AIGC.tex" 1684813802 21131 850adb07dd7b2da7d490b61e73b540f4 ""
+  "A-Simple-Survey-of-AIGC.aux" 1684844450 32 3985256e7290058c681f74d7a3565a19 "pdflatex"
+  "A-Simple-Survey-of-AIGC.tex" 1684844406 21146 81fb8dbe116abff06fe92bd0da85cc93 ""
   "IEEEtran.cls" 1440611324 288304 b67b6fc6c2abb39f9b461923f5199343 ""
   (generated)
   "A-Simple-Survey-of-AIGC.aux"
