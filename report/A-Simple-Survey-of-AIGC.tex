@@ -8,9 +8,9 @@
 \usepackage{graphicx}
 \usepackage{textcomp}
 \usepackage{xcolor}
-\usepackage{fontspec}
+%\usepackage{fontenc}
 \usepackage[backref]{hyperref}
-\setmainfont{Times New Roman}
+%\setmainfont{Times New Roman}
 %\def\BibTeX{{\rm B\kern-.05em{\sc i\kern-.025em b}\kern-.08em
 %    T\kern-.1667em\lower.7ex\hbox{E}\kern-.125emX}}
 \begin{document}
@@ -68,29 +68,29 @@ word distribution using N-gram language modeling\cite{b9} and then search for th
 However, this method cannot effectively adapt to long sentences. To solve this problem, recurrent
 neural networks (RNNs)\cite{b10} were later introduced for language modeling tasks, allowing for
 modeling relatively long dependency. This was followed by the development of Long Short-Term
-Memory (LSTM)\cite{b11} and Gated Recurrent Unit (GRU) [ 25 ], which leveraged gating mechanism to
+Memory (LSTM)\cite{b11} and Gated Recurrent Unit (GRU)\cite{b12}, which leveraged gating mechanism to
 control memory during training. These methods are capable of attending to around 200 tokens in a
-sample [26], which marks a significant improvement compared to N-gram language models.
+sample\cite{b13}, which marks a significant improvement compared to N-gram language models.
 
 \par Meanwhile, in computer vision (CV), before the advent of deep learning-based methods, tra-
-ditional image generation algorithms used techniques such as texture synthesis [27] and texture
-mapping [28]. These algorithms were based on hand-designed features, and were limited in their abil-
-ity to generate complex and diverse images. In 2014, Generative Adversarial Networks (GANs) [ 29]
+ditional image generation algorithms used techniques such as texture synthesis\cite{b14} and texture
+mapping\cite{b15}. These algorithms were based on hand-designed features, and were limited in their abil-
+ity to generate complex and diverse images. In 2014, Generative Adversarial Networks (GANs)\cite{goodfellow2020generative}
 was first proposed, which was a significant milestone in this area, due to its impressive results
-in various applications. Variational Autoencoders (VAEs) [30] and other methods like diffusion
-generative models [31] have also been developed for more fine-grained control over the image
+in various applications. Variational Autoencoders (VAEs)\cite{kingma2013auto} and other methods like diffusion
+generative models\cite{song2019generative} have also been developed for more fine-grained control over the image
 generation process and the ability to generate high-quality images.
 \par The advancement of generative models in various domains has followed different paths, but
-eventually, the intersection emerged: the transformer architecture [32]. The Transformer was 
+eventually, the intersection emerged: the transformer architecture\cite{b1}. The Transformer was 
 initially developed to handle NLP tasks, but it has also been applied to tasks in computer vision. 
 Its various variants for different tasks quickly achieved state-of-the-art performance. In the field of NLP, many
 prominent large language models, e.g., BERT and GPT, adopt the transformer architecture as
-their primary building block. In CV, Vision Transformer (ViT) [ 35 ] and Swin Transformer [ 36] 
+their primary building block. In CV, Vision Transformer (ViT)\cite{dosovitskiy2020image} and Swin Transformer\cite{liu2021swin} 
 later takes this concept even further by combining the transformer architecture with visual components, 
 allowing it to be applied to image based downstreams. 
 Except for the improvement that transformer brought
 to individual modalities, this intersection also enabled models from different domains to be fused
-together for multimodal tasks. One such example of multimodal models is CLIP [ 37 ]. CLIP is a
+together for multimodal tasks. One such example of multimodal models is CLIP\cite{radford2021learning}. CLIP is a
 joint vision-language model that combines the transformer architecture with visual components,
 allowing it to be trained on a massive amount of text and image data. Since it combines visual
 and language knowledge during pre-training, it can also be used as image encoders in multimodal
@@ -100,7 +100,7 @@ generation and led to the possibility of large-scale training.
 \subsection{Model Architecture of Transformer}
 \par Here is a diagram of the Transformer model architecture. 
 We will now explain this architecture by focusing on several modules: 
-Encoder-Decoder, Self-Attention, Position-wise Feed-Forward Network, 
+Encoder-Decoder\cite{bahdanau2014neural}, Self-Attention, Position-wise Feed-Forward Network, 
 Embeddings, and Softmax.
 
 \begin{figure}[htbp]
@@ -114,7 +114,7 @@ Embeddings, and Softmax.
 \par The Encoder consists of $N$ layers, each of which contains two sub-layers. 
 The first sub-layer includes a Multi-Head Attention module, and the 
 second sub-layer includes a position-wise fully connected feed-forward network. 
-In each sub-layer, we apply a residual connection module, followed by layer normalization.
+In each sub-layer, we apply a residual connection\cite{he2016deep} module, followed by layer normalization\cite{ba2016layer}.
 
 \par The Decoder also consists of $N$ independent layers, but unlike the Encoder, 
 each layer of the Decoder contains three sub-layers, which has three different kinds of modules: 
@@ -150,7 +150,7 @@ Scaled Dot-Product Attention first.
 \end{align*}
 
 \par Compared to regular dot-product attention, Scaled Dot-Product Attention includes a 
-scaling factor $\sqrt{d_k}$ in the equation to improve the performance of the softmax 
+scaling factor $\sqrt{d_k}$\cite{britz2017massive} in the equation to improve the performance of the softmax 
 function on larger datasets.
 
 \par Next, let's consider how to apply Scaled Dot-Product Attention to Multi-Head Attention. 
@@ -227,7 +227,7 @@ the Transformer to achieve better performance after training.
 
 \section{BERT}
 
-\par BERT, which stands for Bidirectional Encoder Representations fromTransformers. 
+\par BERT\cite{b2}, which stands for Bidirectional Encoder Representations fromTransformers. 
 Unlike recent language representation models (Peters et al., 2018a; Radford et al., 2018), 
 BERT is designed to pre-train deep bidirectional representations from
 unlabeled text by jointly conditioning on both left and right context in all layers. As a 
@@ -249,7 +249,7 @@ Therefore, BERT uses WordPiece embeddings for this purpose.
 Sentences pairs are packed into a single sequence. There are two methods to differentiate 
 between different sentences within a sequence. Firstly, a special separator token ([SEP]) 
 is used to separate different sentences. Secondly, a learnable embedding is added to each 
-token to indicate which sentence it belongs to.For a given token, its input representation 
+token to indicate which sentence it belongs to. For a given token, its input representation 
 is constructed by summing the corresponding token, segment, and position embeddings, that's 
 what Fig3 shows.
 
@@ -288,7 +288,7 @@ text and to coordinate and unify its inputs and outputs for the specific task at
 
 \section{GPT}
 
-\par GPT (Generative Pre-trained Transformer) is a Transformer-based pre-trained language 
+\par GPT\cite{b3} (Generative Pre-trained Transformer) is a Transformer-based pre-trained language 
 model developed by OpenAI. The development of GPT can be divided into four versions. 
 GPT-1 was pre-trained on a large corpus of text and was one of the first models to 
 demonstrate excellent performance in natural language processing tasks. GPT-2 is an 
@@ -301,14 +301,14 @@ more complex tasks.
 
 \subsection{GPT-1}
 
-\par GPT-1 implemented a semi-supervised approach that combines unsupervised pre-training 
+\par GPT-1\cite{b3} implemented a semi-supervised approach that combines unsupervised pre-training 
 and supervised fine-tuning to accomplish language understanding tasks. This approach 
 enables a large amount of training to form a global transformation, and only minor 
 adjustments are needed to adapt to a wide range of downstream tasks.
 
 \subsubsection{Model Architecture of GPT-1}
 
-\par GPT-1 uses a TransformerDecoder as its primary architecture, 
+\par GPT-1 uses a Transformer Decoder\cite{liu2018generating} as its primary architecture, 
 which has been proven to have strong performance on various tasks. However, 
 depending on the specific task, we can replace or fine-tune different modules 
 of the model, such as its input and output, to better adapt to the task at hand.
@@ -372,7 +372,7 @@ on the following objective $L_3(\mathcal{C})$:
 
 \subsection{GPT-2}
 
-\par GPT-2 largely follows the architecture of its predecessor GPT-1, 
+\par GPT-2\cite{b4} largely follows the architecture of its predecessor GPT-1, 
 with only minor modifications. Layer normalization is moved to after the input 
 of each sub-block, and additional layer normalization is added after the final 
 self-attention module. A modified initialization is used to account for accumulation 
@@ -389,7 +389,7 @@ GPT-2 exhibited remarkable abilities.
 
 \subsection{GPT3}
 
-\par The model size and amount of data used for training in GPT-3 have significantly 
+\par The model size and amount of data used for training in GPT-3\cite{b4} have significantly 
 increased. GPT-3 has 96 layers, each with 96 attention heads, for a total of 175 billion 
 parameters, which is 116 times more than GPT-2. GPT-3 was trained on a 45 terabytes 
 text dataset selected from Common Crawl, containing 500 billion words, which is 
@@ -402,7 +402,7 @@ processing tasks, even surpassing some specially designed models.
 
 \subsection{GPT4}
 
-\par GPT-4's main selling point is multimodal learning, which means it 
+\par GPT-4\cite{b5}'s main selling point is multimodal learning, which means it 
 can accept both images and text as input, and output text. 
 GPT-4 can generate descriptive or creative text based on the content 
 of the images, and it can also generate relevant images based on the content 

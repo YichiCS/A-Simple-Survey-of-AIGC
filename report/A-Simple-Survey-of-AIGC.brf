@@ -6,3 +6,25 @@
 \backcite {b9}{{1}{II}{section.2}}
 \backcite {b10}{{1}{II}{section.2}}
 \backcite {b11}{{1}{II}{section.2}}
+\backcite {b12}{{1}{II}{section.2}}
+\backcite {b13}{{1}{II}{section.2}}
+\backcite {b14}{{1}{II}{section.2}}
+\backcite {b15}{{1}{II}{section.2}}
+\backcite {goodfellow2020generative}{{1}{II}{section.2}}
+\backcite {kingma2013auto}{{1}{II}{section.2}}
+\backcite {song2019generative}{{1}{II}{section.2}}
+\backcite {b1}{{1}{II}{section.2}}
+\backcite {dosovitskiy2020image}{{1}{II}{section.2}}
+\backcite {liu2021swin}{{1}{II}{section.2}}
+\backcite {radford2021learning}{{1}{II}{section.2}}
+\backcite {bahdanau2014neural}{{1}{\mbox {II-A}}{subsection.2.1}}
+\backcite {he2016deep}{{2}{\mbox {II-A}1}{subsubsection.2.1.1}}
+\backcite {ba2016layer}{{2}{\mbox {II-A}1}{subsubsection.2.1.1}}
+\backcite {britz2017massive}{{2}{\mbox {II-A}2}{figure.2}}
+\backcite {b2}{{3}{III}{section.3}}
+\backcite {b3}{{4}{IV}{section.4}}
+\backcite {b3}{{4}{\mbox {IV-A}}{subsection.4.1}}
+\backcite {liu2018generating}{{4}{\mbox {IV-A}1}{subsubsection.4.1.1}}
+\backcite {b4}{{4}{\mbox {IV-B}}{subsection.4.2}}
+\backcite {b4}{{5}{\mbox {IV-C}}{subsection.4.3}}
+\backcite {b5}{{5}{\mbox {IV-D}}{subsection.4.4}}
