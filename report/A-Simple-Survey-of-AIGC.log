@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999995 (TeX Live 2023) (preloaded format=xelatex 2023.4.23)  18 MAY 2023 12:06
+This is XeTeX, Version 3.141592653-2.6-0.999995 (TeX Live 2023) (preloaded format=xelatex 2023.4.23)  18 MAY 2023 14:59
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -380,7 +380,9 @@ Underfull \hbox (badness 4621) in paragraph at lines 290--300
 
 File: pic/fig5.png Graphic file (type bmp)
 <pic/fig5.png>
-[4] (./A-Simple-Survey-of-AIGC.aux)
+[4] [5
+
+] (./A-Simple-Survey-of-AIGC.aux)
 
 LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 
@@ -395,6 +397,6 @@ Here is how much of TeX's memory you used:
  24067 multiletter control sequences out of 15000+600000
  517821 words of font info for 66 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
- 55i,12n,62p,315b,267s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 55i,12n,62p,315b,269s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
-Output written on A-Simple-Survey-of-AIGC.pdf (4 pages).
+Output written on A-Simple-Survey-of-AIGC.pdf (5 pages).

@@ -314,9 +314,62 @@ of the model, such as its input and output, to better adapt to the task at hand.
 
 \begin{figure}[htbp]
     \centerline{\includegraphics[width = 8cm]{pic/fig5.png}}
-    \caption{Model Architecture of GPT-1 \& The Fine-tuning for different tasks}
+    \caption{Model Architecture of GPT-1 \& The Task-specific for different tasks}
     \label{fig}
 \end{figure}
+
+\par As GPT use a Transformer Decoder, this model applies multi-headed self-attention 
+operation over the input context tokens, followed by position-wise feedforward layers, 
+to produce an output distribution over target tokens.
+
+\begin{align*}
+    h_0 &= UW_e + W_p \\
+    h_l &= transformer\_block(h_{l-1})\ \forall i \in \left[1, n\right] \\
+    P(u) &= softmax(h_n W_e^T)
+\end{align*}
+
+\par where $U = (u_{-k}, ..., u_{-1})$ is the context vector of tokens, $n$ is the number of layers, 
+$W_e$ is the token embedding matrix, and $W_p$ is the position embedding matrix.
+
+\subsubsection{Training of GPT-1}
+
+\par The training of GPT-1 is divided into two parts.
+
+\par The first part being unsupervised pre-training.In this process, GPT is given a 
+set of unlabeled corpus tokens $\mathcal{U} = \{u_1, u_2, ..., u_n \}$ and utilizes a standard language model to maximize 
+the following likelihood:
+
+\begin{align*}
+    L_1(\mathcal{U}) = \sum_{i}\log P(u_i | u_{i-k}, ..., u_{i-1};\Theta )
+\end{align*}
+
+\par where $k$ is the size of the context window, and the conditional probability $P$ is 
+modeled using a neural network with parameters $\Theta$. These parameters are trained 
+using stochastic gradient descent [51].
+
+The second part is supervised fine-tuning, which involves adjusting the model parameters 
+for a specific task after unsupervised pre-training. Assuming there is a labeled 
+dataset $\mathcal{C} $, where each input has an associated label. The input is processed by the 
+model to obtain an activation value $h^m_l$, which, when multiplied by $W_y$, can predict the 
+label $y$. This allows us to maximize the following objective $L_2(\mathcal{C})$:
+
+\begin{align*}
+    P(y | x^1, x^2, ..., x^m) &= softmax(h_l^m W_y) \\
+    L_2(\mathcal{C}) &= \sum_{i}\log P(y | x^1, x^2, ..., x^m)
+\end{align*}
+
+Adding a language model as an auxiliary objective during supervised fine-tuning 
+can improve learning by (a) enhancing the generalization ability of the supervised 
+model, and (b) accelerating convergence. Therefore, we perform a maximization operation 
+on the following objective $L_3(\mathcal{C})$:
+
+\begin{align*}
+    L_3(\mathcal{C}) = L_2(\mathcal{C}) + \lambda L_1(\mathcal{C})
+\end{align*}
+
+\par where $\lambda$ is weight.
+
+\subsection{GPT-2}
 
 
 
