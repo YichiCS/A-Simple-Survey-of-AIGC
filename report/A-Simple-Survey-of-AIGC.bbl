@@ -98,4 +98,109 @@ D.~Britz, A.~Goldie, M.-T. Luong, and Q.~Le, ``Massive exploration of neural mac
 \bibitem{liu2018generating}
 P.~J. Liu, M.~Saleh, E.~Pot, B.~Goodrich, R.~Sepassi, L.~Kaiser, and N.~Shazeer, ``Generating wikipedia by summarizing long sequences,'' \emph{arXiv preprint arXiv:1801.10198}, 2018.
 
+\bibitem{wang2023robustness}
+J.~Wang, X.~Hu, W.~Hou, H.~Chen, R.~Zheng, Y.~Wang, L.~Yang, H.~Huang, W.~Ye, X.~Geng \emph{et~al.}, ``On the robustness of chatgpt: An adversarial and out-of-distribution perspective,'' \emph{arXiv preprint arXiv:2302.12095}, 2023.
+
+\bibitem{shen2023chatgpt}
+X.~Shen, Z.~Chen, M.~Backes, and Y.~Zhang, ``In chatgpt we trust? measuring and characterizing the reliability of chatgpt,'' \emph{arXiv preprint arXiv:2304.08979}, 2023.
+
+\bibitem{liu2023evaluating}
+H.~Liu, R.~Ning, Z.~Teng, J.~Liu, Q.~Zhou, and Y.~Zhang, ``Evaluating the logical reasoning ability of chatgpt and gpt-4,'' \emph{arXiv preprint arXiv:2304.03439}, 2023.
+
+\bibitem{chen2021badnl}
+X.~Chen, A.~Salem, D.~Chen, M.~Backes, S.~Ma, Q.~Shen, Z.~Wu, and Y.~Zhang, ``Badnl: Backdoor attacks against nlp models with semantic-preserving improvements,'' in \emph{Annual Computer Security Applications Conference}, 2021, pp. 554--569.
+
+\bibitem{struppek2022rickrolling}
+L.~Struppek, D.~Hintersdorf, and K.~Kersting, ``Rickrolling the artist: Injecting invisible backdoors into text-guided image generation models,'' \emph{arXiv preprint arXiv:2211.02408}, 2022.
+
+\bibitem{shen2021backdoor}
+L.~Shen, S.~Ji, X.~Zhang, J.~Li, J.~Chen, J.~Shi, C.~Fang, J.~Yin, and T.~Wang, ``Backdoor pre-trained models can transfer to all,'' \emph{arXiv preprint arXiv:2111.00197}, 2021.
+
+\bibitem{kurita2020weight}
+K.~Kurita, P.~Michel, and G.~Neubig, ``Weight poisoning attacks on pre-trained models,'' \emph{arXiv preprint arXiv:2004.06660}, 2020.
+
+\bibitem{li2021hidden}
+S.~Li, H.~Liu, T.~Dong, B.~Z.~H. Zhao, M.~Xue, H.~Zhu, and J.~Lu, ``Hidden backdoors in human-centric language models,'' in \emph{Proceedings of the 2021 ACM SIGSAC Conference on Computer and Communications Security}, 2021, pp. 3123--3140.
+
+\bibitem{nelson2008exploiting}
+B.~Nelson, M.~Barreno, F.~J. Chi, A.~D. Joseph, B.~I. Rubinstein, U.~Saini, C.~Sutton, J.~D. Tygar, and K.~Xia, ``Exploiting machine learning to subvert your spam filter.'' \emph{LEET}, vol.~8, no. 1-9, pp. 16--17, 2008.
+
+\bibitem{carlini2023poisoning}
+N.~Carlini, M.~Jagielski, C.~A. Choquette-Choo, D.~Paleka, W.~Pearce, H.~Anderson, A.~Terzis, K.~Thomas, and F.~Tram{\`e}r, ``Poisoning web-scale training datasets is practical,'' \emph{arXiv preprint arXiv:2302.10149}, 2023.
+
+\bibitem{perez2022ignore}
+F.~Perez and I.~Ribeiro, ``Ignore previous prompt: Attack techniques for language models,'' \emph{arXiv preprint arXiv:2211.09527}, 2022.
+
+\bibitem{kang2023exploiting}
+D.~Kang, X.~Li, I.~Stoica, C.~Guestrin, M.~Zaharia, and T.~Hashimoto, ``Exploiting programmatic behavior of llms: Dual-use through standard security attacks,'' \emph{arXiv preprint arXiv:2302.05733}, 2023.
+
+\bibitem{deshpande2023toxicity}
+A.~Deshpande, V.~Murahari, T.~Rajpurohit, A.~Kalyan, and K.~Narasimhan, ``Toxicity in chatgpt: Analyzing persona-assigned language models,'' \emph{arXiv preprint arXiv:2304.05335}, 2023.
+
+\bibitem{maus2023adversarial}
+N.~Maus, P.~Chao, E.~Wong, and J.~Gardner, ``Adversarial prompting for black box foundation models,'' \emph{arXiv preprint arXiv:2302.04237}, 2023.
+
+\bibitem{li2023multi}
+H.~Li, D.~Guo, W.~Fan, M.~Xu, and Y.~Song, ``Multi-step jailbreaking privacy attacks on chatgpt,'' \emph{arXiv preprint arXiv:2304.05197}, 2023.
+
+\bibitem{greshake2023more}
+K.~Greshake, S.~Abdelnabi, S.~Mishra, C.~Endres, T.~Holz, and M.~Fritz, ``More than you've asked for: A comprehensive analysis of novel prompt injection threats to application-integrated large language models,'' \emph{arXiv preprint arXiv:2302.12173}, 2023.
+
+\bibitem{seshia2016towards}
+S.~A. Seshia, D.~Sadigh, and S.~S. Sastry, ``Towards verified artificial intelligence,'' \emph{arXiv preprint arXiv:1606.08514}, 2016.
+
+\bibitem{huang2017safety}
+X.~Huang, M.~Kwiatkowska, S.~Wang, and M.~Wu, ``Safety verification of deep neural networks,'' in \emph{Computer Aided Verification: 29th International Conference, CAV 2017, Heidelberg, Germany, July 24-28, 2017, Proceedings, Part I 30}.\hskip 1em plus 0.5em minus 0.4em\relax Springer, 2017, pp. 3--29.
+
+\bibitem{sinha2017certifying}
+A.~Sinha, H.~Namkoong, R.~Volpi, and J.~Duchi, ``Certifying some distributional robustness with principled adversarial training,'' \emph{arXiv preprint arXiv:1710.10571}, 2017.
+
+\bibitem{goodfellow2017challenge}
+I.~Goodfellow and N.~Papernot, ``The challenge of verification and testing of machine learning,'' \emph{Cleverhans-blog}, 2017.
+
+\bibitem{wicker2018feature}
+M.~Wicker, X.~Huang, and M.~Kwiatkowska, ``Feature-guided black-box safety testing of deep neural networks,'' in \emph{Tools and Algorithms for the Construction and Analysis of Systems: 24th International Conference, TACAS 2018, Held as Part of the European Joint Conferences on Theory and Practice of Software, ETAPS 2018, Thessaloniki, Greece, April 14-20, 2018, Proceedings, Part I 24}.\hskip 1em plus 0.5em minus 0.4em\relax Springer, 2018, pp. 408--426.
+
+\bibitem{wu2020game}
+M.~Wu, M.~Wicker, W.~Ruan, X.~Huang, and M.~Kwiatkowska, ``A game-based approximate verification of deep neural networks with provable guarantees,'' \emph{Theoretical Computer Science}, vol. 807, pp. 298--329, 2020.
+
+\bibitem{xu2022quantifying}
+P.~Xu, W.~Ruan, and X.~Huang, ``Quantifying safety risks of deep neural networks,'' \emph{Complex \& Intelligent Systems}, pp. 1--18, 2022.
+
+\bibitem{ruan2019global}
+W.~Ruan, M.~Wu, Y.~Sun, X.~Huang, D.~Kroening, and M.~Kwiatkowska, ``Global robustness evaluation of deep neural networks with provable guarantees for the hamming distance.''\hskip 1em plus 0.5em minus 0.4em\relax International Joint Conferences on Artificial Intelligence Organization, 2019.
+
+\bibitem{la2020assessing}
+E.~La~Malfa, M.~Wu, L.~Laurenti, B.~Wang, A.~Hartshorn, and M.~Kwiatkowska, ``Assessing robustness of text classification through maximal safe radius computation,'' \emph{arXiv preprint arXiv:2010.02004}, 2020.
+
+\bibitem{cheng2020seq2sick}
+M.~Cheng, J.~Yi, P.-Y. Chen, H.~Zhang, and C.-J. Hsieh, ``Seq2sick: Evaluating the robustness of sequence-to-sequence models with adversarial examples,'' in \emph{Proceedings of the AAAI conference on artificial intelligence}, vol.~34, no.~04, 2020, pp. 3601--3608.
+
+\bibitem{weng2022large}
+Y.~Weng, M.~Zhu, S.~He, K.~Liu, and J.~Zhao, ``Large language models are reasoners with self-verification,'' \emph{arXiv preprint arXiv:2212.09561}, 2022.
+
+\bibitem{weng2023neural}
+Y.~Weng, M.~Zhu, F.~Xia, B.~Li, S.~He, K.~Liu, and J.~Zhao, ``Neural comprehension: Language models with compiled neural networks,'' \emph{arXiv preprint arXiv:2304.01665}, 2023.
+
+\bibitem{frantar2022optimal}
+E.~Frantar and D.~Alistarh, ``Optimal brain compression: A framework for accurate post-training quantization and pruning,'' \emph{arXiv preprint arXiv:2208.11580}, 2022.
+
+\bibitem{feng2023survey}
+P.~Feng and Z.~Tang, ``A survey of visual neural networks: current trends, challenges and opportunities,'' \emph{Multimedia Systems}, vol.~29, no.~2, pp. 693--724, 2023.
+
+\bibitem{nagel2020up}
+M.~Nagel, R.~A. Amjad, M.~Van~Baalen, C.~Louizos, and T.~Blankevoort, ``Up or down? adaptive rounding for post-training quantization,'' in \emph{International Conference on Machine Learning}.\hskip 1em plus 0.5em minus 0.4em\relax PMLR, 2020, pp. 7197--7206.
+
+\bibitem{yao2022zeroquant}
+Z.~Yao, R.~Yazdani~Aminabadi, M.~Zhang, X.~Wu, C.~Li, and Y.~He, ``Zeroquant: Efficient and affordable post-training quantization for large-scale transformers,'' \emph{Advances in Neural Information Processing Systems}, vol.~35, pp. 27\,168--27\,183, 2022.
+
+\bibitem{park2022nuqmm}
+G.~Park, B.~Park, S.~J. Kwon, B.~Kim, Y.~Lee, and D.~Lee, ``nuqmm: Quantized matmul for efficient inference of large-scale generative language models,'' \emph{arXiv preprint arXiv:2206.09557}, 2022.
+
+\bibitem{dettmers2022gpt3}
+T.~Dettmers, M.~Lewis, Y.~Belkada, and L.~Zettlemoyer, ``Gpt3. int8 (): 8-bit matrix multiplication for transformers at scale,'' \emph{Advances in Neural Information Processing Systems}, vol.~35, pp. 30\,318--30\,332, 2022.
+
+\bibitem{hu2021lora}
+E.~J. Hu, Y.~Shen, P.~Wallis, Z.~Allen-Zhu, Y.~Li, S.~Wang, L.~Wang, and W.~Chen, ``Lora: Low-rank adaptation of large language models,'' \emph{arXiv preprint arXiv:2106.09685}, 2021.
+
 \end{thebibliography}

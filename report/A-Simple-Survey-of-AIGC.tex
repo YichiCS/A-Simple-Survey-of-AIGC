@@ -414,11 +414,205 @@ of the text.
 %\subsection{Applications of Diffusion Models}
 %\subsection{Optimizing}
 
-\section{Security and Robustness of GPT}
+\section{Security and Robustness of LLM}
+\par As the use of GPT (Generative Pre-trained Transformer) models becomes more widespread, 
+people are beginning to realize the importance of addressing their robustness and security 
+issues.
+
+\par Robustness issues mainly refer to the ability of GPT models to perform in the face of noise, 
+attacks, and other challenges. For example, how will the model handle input text that contains noise, 
+typos, or interfering phrases? How will it perform in the face of targeted attacks, such as targeted 
+adversarial sample attacks? These are all robustness issues that need to be considered.
+
+\par Security issues mainly relate to the potential harm that GPT models 
+may cause during their application. For instance, if GPT models are used to generate 
+misleading statements, malicious ads, fake news, etc., they could have a negative impact 
+on society. At the same time, if unauthorized individuals gain access to GPT models, 
+they may use them for malicious attacks, phishing, and other illegal activities.
+
+\par Therefore, researching the robustness and security of GPT models is essential 
+to ensure their reliability and safety. This research includes but is not limited 
+to adversarial sample training, robustness evaluation, model interpretability analysis, 
+privacy protection, and other areas. Only by continuously researching the robustness 
+and security issues of GPT models can we better address future challenges and risks, 
+safeguard the reliability and security of GPT models in various fields, and promote 
+their more extensive use.
+
+\par Shortly after the launch of ChatGPT, many papers analyzing the security and 
+robustness of GPT models emerged. For example, paper \cite{wang2023robustness} 
+tested the performance of GPT models and previous LLM models from the 
+perspectives of adversarial attacks and OOD, to see if there was significant improvement. 
+Through the testing in paper, we found that GPT models showed relatively good performance 
+on many security testing datasets. However, there are still issues such as vulnerability 
+to attacks and inadequate guarantees of the authenticity of generated content.
+
+\par Next, we will start with the lifecycle of an LLM (Large Language Model) and attempt 
+to analyze the vulnerabilities that may exist in LLMs and the methods for discovering 
+these vulnerabilities.
+
+\subsection{Vulnerabilities}
+\par At the beginning of this section, we first need to discuss the inherent issues that 
+exist in LLMs. These issues cannot be fixed by the LLM itself, but can be addressed 
+through expanding the training dataset and adjusting the model structure.
+
+\subsubsection*{Performance Issues}
+\par Unlike traditional software systems, the same input in an LLM does not 
+always result in the same output. Performance issues in LLMs can be divided 
+into two parts: factual errors and reasoning errors.
+
+\par Factual errors refer to when the output of an LLM contradicts the truth. 
+When we ask an LLM a simple common sense question, the answer we receive may 
+be far from the truth. \cite{shen2023chatgpt} noted poor performance of ChatGPT in the legal 
+and scientific fields due to factual errors.
+
+\par Reasoning errors are a particularly interesting problem, 
+as they indicate that LLMs are more prone to errors when performing 
+logical reasoning tasks. This is because LLMs do not reason themselves, 
+but generate a probabilistic answer based on the way they were trained. 
+When a question is similar to what the LLM was trained on, it will have a 
+higher accuracy\cite{liu2023evaluating}.
+
+\subsubsection*{Backdoor Attack}
+\par Backdoor attacks aim to inject harmful knowledge to cause errors in LLMs. 
+Common backdoor attacks include poisoning the training data during the training phase 
+or modifying the parameters of the model. Backdoor attacks only trigger when the 
+input prompt to the model contains a corresponding trigger, which causes the LLM 
+to exhibit the erroneous behavior that the attacker expects.
+
+\par Let's first consider how to design a backdoor trigger. 
+\cite{chen2021badnl} introduced three different types of backdoor triggers 
+that operate at the character, word, and sentence levels. 
+\cite{struppek2022rickrolling} introduces two novel backdoor triggers, one that uses 
+homophones to attack and another that applies dynamic sentence attacks.
+
+\par Next, let's consider how to implant a pre-designed trigger into a model. 
+\cite{shen2021backdoor} introduced a backdoor attack on pre-trained NLP models 
+that does not require any task-specific labels. \cite{kurita2020weight} introduces a method called 
+RIPPLe for implementing backdoor attacks on fine-tuning datasets, while 
+also implementing a technique called Embedding Surgery to enhance the survival 
+rate of the backdoor.
+
+\par In addition, there are many more complex forms of backdoor attacks. 
+For example, \cite{li2021hidden} implemented backdoor attacks in more complex downstream NLP tasks, 
+such as NMT and QA, by replacing the designed questions, resulting in harmful responses 
+to users. \cite{struppek2022rickrolling} introduced backdoor attacks on text-based image generation tasks for 
+the first time, using a teach-student method to implant the backdoor into a pre-trained 
+text encoder.
+
+\subsubsection*{Poisoning and Disinformation}
+
+\par Poisoning attacks are quite effective in attacking deep neural networks because most 
+models are fine-tuned on many public datasets that often contain many untrusted documents 
+and websites, making it easy for attackers to inject harmful data. \cite{nelson2008exploiting} demonstrates 
+how the poisoning attack can render a spam filter useless. Even if only 1 percent 
+of the data is maliciously modified, the spam filter can easily fail. \cite{carlini2023poisoning} introduces 
+two poisoning attacks, showing us how to modify a small amount of data to achieve good 
+attack results, and experiments were conducted on various popular datasets.
+
+\subsubsection*{Prompt Injection}
+
+\par The Prompt Engineering Guide on github introduced several methods of using prompt injection to cause LLM misalignment. 
+In these attacks, the attacker uses the prompt to make the LLM generate offensive and 
+inappropriate content. \cite{perez2022ignore} provides two ways to attack using prompts, one called goal 
+hijacking, which aims to change the potential target of the original prompt into a 
+targeted one, and the other called prompt leaking, which endeavors to retrieve information 
+from private prompts.
+
+\par \cite{kang2023exploiting} explores the programmatic behavior of LLMs, demonstrating that classical 
+security attack methods can also be used to attack the defense systems of LLMs. 
+Instruction-based LLMs can generate convincing malicious content under malicious prompts. 
+\cite{deshpande2023toxicity} proposes an attack method of assigning a persona to LLMs. For example, prompting an LLM 
+to \"speak like Muhammad Ali\" can significantly increase the toxicity of its generated 
+content. \cite{maus2023adversarial} develops a black-box framework for non-structured image and text generation, 
+applying black-box methods to explore adversarial prompts.
+
+\par \cite{li2023multi} claims that in previous versions of ChatGPT, personal private information 
+could be directly extracted through prompts. Furthermore, they have developed a method 
+that can change ChatGPT's restrictions, allowing it to answer user queries unethically. 
+\cite{greshake2023more} has proposed a novel indirect prompt injection method, indicating that prompt injection 
+risks may occur not only among attackers but also among users, developers, and automated 
+data processing systems.
+
+\subsubsection*{Else}
+\par In fact, there are many vulnerabilities in LLMs that we have not yet 
+encountered and are difficult to control. For example, there have been issues 
+with the leakage of some users' information during the operation of ChatGPT, 
+which highlights the importance of maintaining LLM application systems. 
+In addition, we have found that LLMs may exhibit some obvious biases during operation, 
+leading to answers with a certain subjective tendency. In fact, the ChatGPT model 
+categorizes itself as an ENFJ personality type in the Myers-Briggs Type Indicator test. 
+These potential issues may cause harm to LLMs in the future.
+
+\subsection{Verification}
+
+This section discusses if and how more rigorous verification can be extended to work
+on LLM-based machine-learning tasks. So far, the verification or certification of LLMs
+is still an emerging research area. This section will first provide a comprehensive
+and systematic review of the verification techniques on various NLP models. Then
+we discuss a few pioneering black-box verification methods that can be workable on
+large-scale language models. These are followed by a discussion on how to extend
+these efforts towards LLMs and a review of the efforts to reduce the scale of LLMs to
+increase the validity of verification techniques
+
+\subsubsection*{Verification on Natural Language Processing Models}
+
+\par As discussed in previous sections, an attacker could generate millions of adversarial
+examples by manipulating every word in a sentence. However, such methods may still
+fail to address numerous unseen cases arising from exponential combinations of differ-
+ent words in a text input. To overcome these limitations, another class of techniques
+has emerged, grounded in the concept of "certification" or "verification"\cite{seshia2016towards,huang2017safety}.
+For example, via certification or verification, these methods train the model to provide
+an upper bound on the worst-case loss of perturbations, thereby offering a certificate of
+robustness without necessitating the exploration of the adversarial space \cite{sinha2017certifying}. By util-
+ising these certification-driven methods, we can better evaluate the model’s robustness
+in the face of adversarial attacks \cite{goodfellow2017challenge}.
+
+\subsubsection*{Black-box Verification}
+
+\par Most existing verification techniques have specific requirements for deep 
+neural networks, but with the increasing complexity and scale of LLMs, black-box 
+methods have become an inevitable trend for verification\cite{wicker2018feature,wu2020game,xu2022quantifying}.
+In the black-box setting, adversaries can only query the target classifier 
+without knowing the underlying model or the feature representations of inputs. 
+Several studies have explored more efficient methods for black-box settings, 
+although most of the current approaches focus on vision models \cite{wicker2018feature,wu2020game,xu2022quantifying}.
+Subsequently, an anytime algorithm was developed to approximate global robustness 
+by iteratively computing lower and upper bounds \cite{ruan2019global}. Recently, some researchers 
+have attempted to develop black-box verification methods for NLP models, although 
+these methods are not scalable to LLMs. For example, one study introduced a framework 
+for evaluating the robustness of NLP models against word substitutions \cite{la2020assessing}.
 
 
+\subsubsection*{Robustness Evaluation on LLMs}
+
+\par With the widespread adoption of LLMs, people have begun to analyze the robustness 
+of these models. Cheng et al. \cite{cheng2020seq2sick} proposed a seq2seq algorithm based on a projected 
+gradient method, and introduced innovative loss functions for targeted keyword attacks 
+and non-overlapping adversarial examples. Weng et al. \cite{weng2022large,weng2023neural} presented a 
+self-verification method that leverages the conclusion of CoT as a condition for 
+constructing a new sample, and then tasks the LLM with re-predicting the original 
+conditions that have been masked. This approach allows for the calculation of an 
+explainable verification score based on accuracy. However, until now, there has been 
+limited research on verifying LLMs.
+
+\subsubsection*{Towards Smaller Models}
+
+\par Due to the large number of parameters in current LLMs, 
+which can reach billions, verification becomes difficult, and thus, 
+we may need to use smaller LLMs. One approach is model compression, 
+such as quantization \cite{frantar2022optimal,feng2023survey,nagel2020up}, 
+but directly applying quantization techniques 
+on LLMs can lead to performance degradation. Therefore, we still need other 
+techniques to achieve this goal\cite{yao2022zeroquant, park2022nuqmm,dettmers2022gpt3}. In addition to quantization 
+techniques, low-rank adaptation \cite{hu2021lora} has been shown to significantly reduce the 
+number of parameters while maintaining model performance.
 
 
+\section{Conclusion}
+In this survey, we explored the basic structure and training principles 
+of the Transformer model, with a focus on representative models such as BERT and 
+GPT. We investigated the security and robustness issues of LLMs, and identified 
+their major vulnerabilities. Furthermore, we examined various methods to verify LLMs.
 
 
 \bibliography{mybib}
