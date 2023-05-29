@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2023.4.23)  25 MAY 2023 21:25
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2023.4.23)  25 MAY 2023 21:27
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -414,7 +414,7 @@ File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 <pic/fig1.png, id=121, 457.71pt x 643.40375pt>
 File: pic/fig1.png Graphic file (type png)
 <use pic/fig1.png>
-Package pdftex.def Info: pic/fig1.png  used on input line 107.
+Package pdftex.def Info: pic/fig1.png  used on input line 105.
 (pdftex.def)             Requested size: 227.62204pt x 319.96338pt.
  [1{/usr/local/texlive/2023/texmf-var/fonts/map/pdftex/updmap/pdftex.map}{/usr/local/texlive/2023/texmf-dist/fonts/enc/dvips/base/8r.enc}
 
@@ -423,30 +423,30 @@ Package pdftex.def Info: pic/fig1.png  used on input line 107.
 <pic/fig2.png, id=155, 861.2175pt x 459.7175pt>
 File: pic/fig2.png Graphic file (type png)
 <use pic/fig2.png>
-Package pdftex.def Info: pic/fig2.png  used on input line 140.
+Package pdftex.def Info: pic/fig2.png  used on input line 138.
 (pdftex.def)             Requested size: 227.62204pt x 121.50188pt.
 
-Overfull \hbox (9.5307pt too wide) detected at line 168
+Overfull \hbox (9.5307pt too wide) detected at line 166
 []
  []
 
 [2 <./pic/fig1.png> <./pic/fig2.png>]
-Overfull \hbox (2.5724pt too wide) detected at line 221
+Overfull \hbox (2.5724pt too wide) detected at line 219
 []
  []
 
 <pic/fig3.png, id=176, 711.65875pt x 219.82124pt>
 File: pic/fig3.png Graphic file (type png)
 <use pic/fig3.png>
-Package pdftex.def Info: pic/fig3.png  used on input line 257.
+Package pdftex.def Info: pic/fig3.png  used on input line 255.
 (pdftex.def)             Requested size: 227.62204pt x 70.30733pt.
 <pic/fig4.png, id=177, 879.285pt x 375.4025pt>
 File: pic/fig4.png Graphic file (type png)
 <use pic/fig4.png>
-Package pdftex.def Info: pic/fig4.png  used on input line 271.
+Package pdftex.def Info: pic/fig4.png  used on input line 269.
 (pdftex.def)             Requested size: 227.62204pt x 97.17845pt.
 
-Underfull \hbox (badness 5954) in paragraph at lines 291--301
+Underfull \hbox (badness 5954) in paragraph at lines 289--299
 []\OT1/ptm/m/n/10 GPT [[][]3[]] (Gen-er-a-tive Pre-trained Trans-former) is a
  []
 
@@ -454,7 +454,7 @@ Underfull \hbox (badness 5954) in paragraph at lines 291--301
 <pic/fig5.png, id=190, 985.6825pt x 405.515pt>
 File: pic/fig5.png Graphic file (type png)
 <use pic/fig5.png>
-Package pdftex.def Info: pic/fig5.png  used on input line 317.
+Package pdftex.def Info: pic/fig5.png  used on input line 315.
 (pdftex.def)             Requested size: 227.62204pt x 93.64392pt.
  [4 <./pic/fig5.png>] [5] [6] (./A-Simple-Survey-of-AIGC.bbl (./A-Simple-Survey-of-AIGC.brf)
 \tf@brf=\write4
@@ -497,7 +497,7 @@ Here is how much of TeX's memory you used:
  1141 hyphenation exceptions out of 8191
  90i,13n,90p,509b,584s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi5.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/urw/times/utmb8a.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/urw/times/utmbi8a.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/urw/times/utmr8a.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
-Output written on A-Simple-Survey-of-AIGC.pdf (8 pages, 806209 bytes).
+Output written on A-Simple-Survey-of-AIGC.pdf (8 pages, 806423 bytes).
 PDF statistics:
  455 PDF objects out of 1000 (max. 8388607)
  404 compressed objects within 5 object streams

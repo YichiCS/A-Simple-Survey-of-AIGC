@@ -1,13 +1,13 @@
 # Fdb version 4
-["bibtex A-Simple-Survey-of-AIGC"] 1685021128 "A-Simple-Survey-of-AIGC.aux" "A-Simple-Survey-of-AIGC.bbl" "A-Simple-Survey-of-AIGC" 1685021129 0
+["bibtex A-Simple-Survey-of-AIGC"] 1685021264 "A-Simple-Survey-of-AIGC.aux" "A-Simple-Survey-of-AIGC.bbl" "A-Simple-Survey-of-AIGC" 1685021267 0
   "./mybib.bib" 1685020956 17656 d51cef1c436f95f0ddff553c738d6580 ""
   "/usr/local/texlive/2023/texmf-dist/bibtex/bst/ieeetran/IEEEtran.bst" 1440712899 57748 7c8250ecf02814ce6ddc0cdbb63df1dd ""
-  "A-Simple-Survey-of-AIGC.aux" 1685021129 12285 14b9f315392c9f3ee46f16284c1fb7ba "pdflatex"
+  "A-Simple-Survey-of-AIGC.aux" 1685021267 12285 14b9f315392c9f3ee46f16284c1fb7ba "pdflatex"
   (generated)
   "A-Simple-Survey-of-AIGC.bbl"
   "A-Simple-Survey-of-AIGC.blg"
   (rewritten before read)
-["pdflatex"] 1685021128 "A-Simple-Survey-of-AIGC.tex" "A-Simple-Survey-of-AIGC.pdf" "A-Simple-Survey-of-AIGC" 1685021129 0
+["pdflatex"] 1685021266 "A-Simple-Survey-of-AIGC.tex" "A-Simple-Survey-of-AIGC.pdf" "A-Simple-Survey-of-AIGC" 1685021267 0
   "/usr/local/texlive/2023/texmf-dist/fonts/enc/dvips/base/8r.enc" 1165713224 4850 80dc9bab7f31fb78a000ccfed0e27cab ""
   "/usr/local/texlive/2023/texmf-dist/fonts/map/fontname/texfonts.map" 1577235249 3524 cb3e574dea2d1052e39280babc910dc8 ""
   "/usr/local/texlive/2023/texmf-dist/fonts/tfm/adobe/times/ptmb7t.tfm" 1136768653 2172 fd0c924230362ff848a33632ed45dc23 ""
@@ -113,11 +113,11 @@
   "/usr/local/texlive/2023/texmf-var/fonts/map/pdftex/updmap/pdftex.map" 1682256728 4623355 b8cad38412faebe1ce5b780a45db67bd ""
   "/usr/local/texlive/2023/texmf-var/web2c/pdftex/pdflatex.fmt" 1682256698 7883459 49fb4880892cceb9ca0a75bf28b17f6f ""
   "/usr/local/texlive/2023/texmf.cnf" 1678822455 577 1b2b1af17af2508fb20dd85783af4050 ""
-  "A-Simple-Survey-of-AIGC.aux" 1685021129 12285 14b9f315392c9f3ee46f16284c1fb7ba "pdflatex"
-  "A-Simple-Survey-of-AIGC.bbl" 1685021128 14379 b0df69d4ab91abe1f659e1d7c0d6d85a "bibtex A-Simple-Survey-of-AIGC"
-  "A-Simple-Survey-of-AIGC.brf" 1685021129 3243 31523aaf9213617a1f8a0504575afe06 "pdflatex"
-  "A-Simple-Survey-of-AIGC.out" 1685021129 3264 0e212da2ee9636b86000a54c8a8ef6b6 "pdflatex"
-  "A-Simple-Survey-of-AIGC.tex" 1685021127 34356 340040ddb04d0788bd2e8b437a18ceda ""
+  "A-Simple-Survey-of-AIGC.aux" 1685021267 12285 14b9f315392c9f3ee46f16284c1fb7ba "pdflatex"
+  "A-Simple-Survey-of-AIGC.bbl" 1685021264 14379 b0df69d4ab91abe1f659e1d7c0d6d85a "bibtex A-Simple-Survey-of-AIGC"
+  "A-Simple-Survey-of-AIGC.brf" 1685021267 3243 31523aaf9213617a1f8a0504575afe06 "pdflatex"
+  "A-Simple-Survey-of-AIGC.out" 1685021267 3264 0e212da2ee9636b86000a54c8a8ef6b6 "pdflatex"
+  "A-Simple-Survey-of-AIGC.tex" 1685021266 34260 01e8fa6592bbb495a449909d52f631cf ""
   "IEEEtran.cls" 1440611324 288304 b67b6fc6c2abb39f9b461923f5199343 ""
   "pic/fig1.png" 1684325563 186043 fae5a2e3c502fc4e66cd0d6f516677e7 ""
   "pic/fig2.png" 1684329180 190455 02830e3c18f760aa604801380480d85c ""
